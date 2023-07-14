@@ -21,13 +21,13 @@ def get_data(type):
         if check in ('yes','y'):
             return information
 
-def get_user_information():
+def get_user_information(file):
     email_user = get_data('Poczta email address')
     password_user = get_data('password')
-    save_data(email_user, password_user)
+    save_data(email_user, password_user, file)
 
-def save_data(data1, data2, user_data):
-    with open(user_data, 'w', encoding='utf-8', newline='') as arquivo:
+def save_data(data1, data2, file):
+    with open(file, 'w', encoding='utf-8', newline='') as arquivo:
         arquivo.write(f'{data1}{os.linesep}')
         arquivo.write(f'{data2}')
 

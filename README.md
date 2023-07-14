@@ -33,6 +33,20 @@ pip install webdriver-manager
 pip install cx-freeze
 ```
 
+You can download all of them as followed:
+
+Being in the root of the project, open your terminal:
+
+On **Windows**, run:
+```
+pip install -r requirements.txt
+```
+
+On **Linux** or **Mac**:
+```
+pip3 install -r requirements.txt
+```
+
 ***
 
 

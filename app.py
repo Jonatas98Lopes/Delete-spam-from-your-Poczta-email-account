@@ -1,6 +1,6 @@
 # ELIMINANDO SPAMS DO EMAIL:
 from selenium.webdriver.common.by import By
-from modules.starting_driver import*
+from modules.starting_driver import *
 from modules.actions import *
 from genericpath import getsize
 
@@ -9,13 +9,13 @@ user_data = 'assets\\user_data.txt'
 # 1 VERIFICAR SE O ARQUIVO "user_data.txt" ESTÁ VAZIO. SE SIM, OBTER CREDENCIAIS DE ACESSO DO USUÁRIO 
 if getsize(user_data) == 0:
     #  SE SIM, OBTER CREDENCIAIS DE ACESSO DO USUÁRIO E SALVÁ-LAS NO "user_data.txt"
-    get_user_information()
+    get_user_information(user_data)
 
 # 2 PERGUNTE SE O USUÁRIO QUER TROCAR DE CONTA.
 new_user = input('Would you like to sign in with another account? Yes [y] - No [n]: ').lower().strip()
 if new_user in ('yes', 'y'):
     # SE SIM, OBTER AS NOVAS CREDENCIAIS DE ACESSO E SALVÁ-LAS NO "user_data.txt"
-    get_user_information()
+    get_user_information(user_data)
 
 # 3 LER OS DADOS DE ACESSO DO USUÁRIO
 email, password = read_data(user_data)
